@@ -1,0 +1,67 @@
+# 🚀 AI Attendance System
+
+An automated attendance management system leveraging Computer Vision and Deep Learning to identify individuals and log their entry/exit times in real-time.
+
+---
+
+## 📌 Project Overview
+This system uses **DeepFace (Facenet)** for face recognition and a **Flask** backend to manage data. It features a modern, responsive web dashboard where administrators can monitor attendance and employees can log in to view their personal records.
+
+### Key Features:
+* **Real-time Recognition:** Uses OpenCV and DeepFace to detect and identify faces from a live camera feed.
+* **Dual Storage:** Automatically logs data to both a CSV file (`attendance.csv`) and an SQLite database (`attendance.db`).
+* **Smoothing Algorithm:** Implements a buffer system (Counter) to prevent flickering and ensure high accuracy in identification.
+* **Web Dashboard:** Admin and Employee login panels with visual statistics and percentage tracking.
+* **Data Export:** Capability to download the attendance logs directly from the web interface.
+
+---
+
+## 🛠️ Tech Stack
+
+**Backend:**
+* Python (Flask)
+* OpenCV (Image Processing)
+* DeepFace (Face Recognition - Facenet Model)
+* SQLite3 (Database)
+
+**Frontend:**
+* HTML5 & CSS3 (Modern UI with Glassmorphism)
+* JavaScript (ES6+)
+* Chart.js (For visual data representation)
+
+---
+
+## 📂 File Structure
+
+| File | Description |
+| :--- | :--- |
+| `app.py` | Flask server handling API routes, database sync, and camera process management. |
+| `main.py` | The core AI engine. Handles camera feed, face embeddings, and recognition logic. |
+| `index.html` | The main user interface containing Login, Dashboard, and Camera view. |
+| `style.css` | UI styling including animations and dark-mode aesthetics. |
+| `script.js` | Frontend logic for API calls, UI transitions, and chart rendering. |
+| `attendance.db` | SQLite database for persistent attendance records. |
+| `attendance.csv` | Flat-file log of daily attendance for easy portability. |
+| `dataset/` | **(Required)** Folder containing subfolders of images for each person (e.g., `dataset/john/`). |
+
+---
+
+## 🚀 Installation & Setup
+
+### 1. Prerequisites
+Ensure you have Python 3.8+ installed. You will also need a webcam.
+
+### 2. Install Dependencies
+```bash
+pip install flask flask-cors opencv-python deepface tf-keras
+
+
+dataset/
+├── aastha/
+│   ├── img1.jpg
+│   └── img2.jpg
+└── tanu/
+    └── img1.jpg
+
+
+python app.py

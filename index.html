@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 📊 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- 🌈 BACKGROUND -->
+<div class="bg-animation"></div>
+
+<!-- 🔐 LOGIN -->
+<div id="loginBox">
+
+    <div class="brand">🚀 AI Attendance System</div>
+
+    <div id="loginWrapper">
+
+        <!-- ADMIN -->
+        <div class="login-section">
+            <h2>Admin Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- EMPLOYEE -->
+        <div class="login-section">
+            <h2>Employee Login</h2>
+            <input type="text" id="empId" placeholder="Employee ID">
+            <input type="password" id="empPass" placeholder="Password">
+            <button onclick="employeeLogin()">Login</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔄 LOADER -->
+<div id="loader" style="display:none;">
+    <div class="spinner"></div>
+    <p>Initializing AI System...</p>
+</div>
+
+<!-- 🏠 MAIN DASHBOARD -->
+<div class="container" id="mainContent">
+
+    <h1>AI Face Recognition</h1>
+    <p class="subtitle">Smart Attendance Dashboard</p>
+
+    <div class="card">
+
+        <!-- 📊 STATS -->
+        <div class="stats">
+            <div class="box">👥 Total: <span id="total">0</span></div>
+            <div class="box">📅 Today: <span id="today">0</span></div>
+        </div>
+
+        <!-- 🎥 CAMERA -->
+        <div class="camera-box">
+            <video id="camera" autoplay></video>
+        </div>
+
+        <!-- 🔘 BUTTONS -->
+        <div class="buttons">
+            <button class="start" onclick="startSystem()">Start Camera</button>
+            <button class="view" onclick="viewAttendance()">View Attendance</button>
+            <button class="view" onclick="showPercentage()">Attendance %</button>
+            <button class="exit" onclick="exitApp()">Exit</button>
+            <button class="exit" onclick="goBack()">Logout</button>
+        </div>
+
+        <!-- 📊 CHART -->
+        <div id="chartContainer">
+            <canvas id="attendanceChart"></canvas>
+        </div>
+        <!-- 📋 ATTENDANCE TABLE -->
+        <div id="attendanceContainer">
+    
+    <div id="attendanceBox"></div>
+
+    <!-- BUTTON WRAPPER ADD -->
+    <div class="attendance-buttons">
+        <button class="download-btn" onclick="downloadData()">⬇ Download</button>
+        <button class="close-btn" onclick="closeAttendance()">❌ Close</button>
+    </div>
+
+</div>>
+
+        <!-- 🟢 STATUS -->
+        <p id="status">🟢 System Ready</p>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

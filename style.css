@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #020617;
+    --card: #0f172a;
+    --primary: #3b82f6;
+    --accent: #22c55e;
+    --danger: #ef4444;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+}
+
+/* 🔥 BODY FIX */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: block;
+    padding: 10px;
+}
+
+/* 🌈 BACKGROUND */
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #020617, #0f172a, #1e293b, #020617);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* BRAND */
+.brand {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* LOGIN */
+#loginBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginWrapper {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* LOGIN CARD */
+.login-section {
+    width: 280px;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* INPUT */
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #3b82f6, #00f2fe);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* CARD */
+.card {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.95);
+}
+
+/* BUTTON GROUP */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button {
+    width: 230px;
+}
+
+/* STATUS */
+#status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* 📊 ATTENDANCE SECTION */
+#attendanceContainer {
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+/* 🔥 BUTTON FIX */
+.attendance-buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.close-btn {
+    background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+/* 📊 GRAPH SIZE FIX */
+#chartContainer {
+    width: 250px;
+    margin: 20px auto;
+}
+
+#attendanceChart {
+    max-width: 250px !important;
+    max-height: 250px !important;
+}
+
+/* 🔥 PERCENTAGE UI */
+.percent-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.percent-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 120px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 8px solid #22c55e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* SEARCH */
+#searchBox {
+    width: 80%;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border: none;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background: #1e293b;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
